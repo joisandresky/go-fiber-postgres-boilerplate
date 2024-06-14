@@ -26,8 +26,8 @@ func main() {
 	postgresDb := database.InitGormPostgres(cfg.App.Environment, &cfg.Database, logger)
 	logger.Info("Successfully connect into Database!")
 
-	tpqaSvc := infrastructure.NewServer(cfg, logger, postgresDb)
-	if err := tpqaSvc.Run(); err != nil {
+	appService := infrastructure.NewServer(cfg, logger, postgresDb)
+	if err := appService.Run(); err != nil {
 		logger.Errorf("failed to kickstart the service!: %v", err)
 		os.Exit(1)
 	}
