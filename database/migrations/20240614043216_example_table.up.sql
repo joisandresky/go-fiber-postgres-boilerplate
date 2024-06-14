@@ -1,0 +1,1 @@
+SELECT 'All Things will be created!' AS fact;
