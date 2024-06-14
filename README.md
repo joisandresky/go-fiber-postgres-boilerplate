@@ -1,7 +1,5 @@
-# Cognotiv Pandai TPQA Service
-
-Service Responsibilities:
-- TPQA
+# Go Fiber Postgres Boilerplate
+This is an example of Go project with Fiber and Postgres
 
 ## Technology used
 
@@ -14,6 +12,7 @@ Service Responsibilities:
 - Fiber
 - Manual Dependency injection -> check (internal/infrastructure/injector.go)
 - [Zap](https://github.com/uber-go/zap) - Logger (SugaredLogger)
+- [golang-migrate](https://github.com/golang-migrate/migrate) - DB migrations
 - Other libraries
 
 ## Folder Structure
@@ -21,7 +20,7 @@ Service Responsibilities:
 - `cmd`: main file to call the app
 - `configs`: helper to load .env & all the configuration needed
 - `pkg`: shared packages
-- `database/migration`: all database migration files created by [golang-migrate](https://github.com/golang-migrate/migrate)
+- `database/migrations`: all database migration files created by [golang-migrate](https://github.com/golang-migrate/migrate)
 - `internal`: internal modules
   - `infrastructure`: main app to initiate server & injecting dependency
   - `dto`: data to object usually containing Request Response structs or any other struct convertions1
